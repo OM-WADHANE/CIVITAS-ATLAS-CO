@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Civitas Atlas Technologies builds digital public infrastructure and land intelligence platforms for India, starting with MahaAtlas — the Maharashtra Land Intelligence Platform." />
+  <meta name="theme-color" content="#09090B" />
+  <title>Civitas Atlas — Building India's Land Intelligence Infrastructure</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Civitas Atlas Technologies",
+    "url": "https://www.civitasatlas.in",
+    "description": "Civitas Atlas Technologies builds digital public infrastructure and land intelligence platforms for India.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════ -->
+<header class="navbar" id="navbar" role="banner">
+  <div class="container">
+    <div class="navbar__inner" id="navbarInner">
+
+      <!-- Logo -->
+      <a href="#home" class="navbar__logo" aria-label="Civitas Atlas – Home">
+        <span class="navbar__logo-mark" aria-hidden="true">C</span>
+        <span class="navbar__logo-text">Civitas Atlas</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="navbar__nav" aria-label="Primary navigation">
+        <a href="#home"     class="navbar__link">Home</a>
+        <a href="#about"    class="navbar__link">About</a>
+        <a href="#vision"   class="navbar__link">Vision</a>
+        <a href="#products" class="navbar__link">Products</a>
+        <a href="#research" class="navbar__link">Research</a>
+        <a href="#roadmap"  class="navbar__link">Roadmap</a>
+        <a href="#contact"  class="navbar__link">Contact</a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="#products" class="btn btn--gold btn--sm navbar__cta">Explore MahaAtlas</a>
+
+      <!-- Mobile hamburger -->
+      <button class="navbar__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="navbar__hamburger-bar"></span>
+        <span class="navbar__hamburger-bar"></span>
+        <span class="navbar__hamburger-bar"></span>
+      </button>
+
+    </div><!-- /.navbar__inner -->
+
+    <!-- Mobile menu -->
+    <div class="navbar__mobile" id="mobileMenu" aria-hidden="true">
+      <a href="#home"     class="navbar__mobile-link" onclick="closeMobileMenu()">Home</a>
+      <a href="#about"    class="navbar__mobile-link" onclick="closeMobileMenu()">About</a>
+      <a href="#vision"   class="navbar__mobile-link" onclick="closeMobileMenu()">Vision</a>
+      <a href="#products" class="navbar__mobile-link" onclick="closeMobileMenu()">Products</a>
+      <a href="#research" class="navbar__mobile-link" onclick="closeMobileMenu()">Research</a>
+      <a href="#roadmap"  class="navbar__mobile-link" onclick="closeMobileMenu()">Roadmap</a>
+      <a href="#contact"  class="navbar__mobile-link" onclick="closeMobileMenu()">Contact</a>
+      <a href="#products" class="btn btn--gold btn--sm navbar__mobile-cta" onclick="closeMobileMenu()">Explore MahaAtlas</a>
+    </div>
+
+  </div><!-- /.container -->
+</header>
+
+<main id="main-content">
+
+<!-- ═══════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<section class="hero" id="home" aria-labelledby="heroHeading">
+
+  <!-- Animated grid background -->
+  <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+  <!-- Purple glow blobs -->
+  <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+  <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero__content">
+
+      <!-- Eyebrow badge -->
+      <div class="hero__badge reveal" data-reveal="fade-up">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.93 4.93l2.12 2.12m9.9 9.9 2.12 2.12M4.93 19.07l2.12-2.12m9.9-9.9 2.12-2.12"/></svg>
+        Digital Public Infrastructure, built from Maharashtra
+      </div>
+
+      <!-- Main headline -->
+      <h1 class="hero__heading reveal" data-reveal="fade-up" data-delay="100" id="heroHeading">
+        Building India's<br>
+        <span class="hero__heading-gradient">Land Intelligence</span><br>
+        Infrastructure
+      </h1>
+
+      <!-- Sub-heading -->
+      <p class="hero__subheading reveal" data-reveal="fade-up" data-delay="200">
+        Civitas Atlas transforms fragmented government land records into trusted intelligence
+        for citizens, developers, financial institutions, legal professionals, and governments.
+      </p>
+
+      <!-- CTA row -->
+      <div class="hero__ctas reveal" data-reveal="fade-up" data-delay="300">
+        <a href="#products" class="btn btn--gold btn--lg magnetic">
+          Explore MahaAtlas
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#vision" class="btn btn--outline btn--lg magnetic">Read Vision</a>
+      </div>
+
+      <!-- Audience tags -->
+      <div class="hero__audiences reveal" data-reveal="fade-up" data-delay="400">
+        <span class="hero__audience-tag">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Citizens
+        </span>
+        <span class="hero__audience-tag">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          Developers
+        </span>
+        <span class="hero__audience-tag">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Financial Institutions
+        </span>
+        <span class="hero__audience-tag">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
+          Legal Professionals
+        </span>
+        <span class="hero__audience-tag">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 22V8l9-6 9 6v14"/><path d="M3 22H1M23 22h-2"/><path d="M9 22V12h6v10"/><path d="M8 6.03 12 3l4 3.03"/></svg>
+          Government Bodies
+        </span>
+      </div>
+
+    </div><!-- /.hero__content -->
+  </div><!-- /.container -->
+
+  <!-- Bottom gradient fade -->
+  <div class="hero__fade" aria-hidden="true"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════ -->
+<section class="section" id="about" aria-labelledby="aboutHeading">
+  <div class="container">
+    <div class="about__grid">
+
+      <!-- Left: text column -->
+      <div class="about__text">
+        <p class="section__eyebrow reveal" data-reveal="fade-up">About Civitas Atlas</p>
+        <h2 class="section__title reveal" data-reveal="fade-up" data-delay="80" id="aboutHeading">
+          Land records were never designed to be trusted at scale.
+        </h2>
+        <p class="section__desc reveal" data-reveal="fade-up" data-delay="160">
+          Across India, land ownership lives in handwritten registers, scanned PDFs, court archives,
+          and disconnected department databases. Civitas Atlas Technologies builds the intelligence
+          layer that reconciles this fragmentation — turning static records into a living, verifiable
+          map of the truth.
+        </p>
+        <p class="about__sub reveal" data-reveal="fade-up" data-delay="220">
+          We work at the intersection of geospatial science, applied AI, and public administration —
+          building infrastructure that governments, institutions, and citizens can all rely on.
+        </p>
+      </div>
+
+      <!-- Right: pillar cards -->
+      <div class="pillars__grid">
+
+        <div class="pillar-card reveal" data-reveal="fade-up" data-delay="60">
+          <div class="pillar-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          </div>
+          <h3 class="pillar-card__title">GIS Intelligence</h3>
+          <p class="pillar-card__desc">Satellite-grade spatial mapping fused with cadastral survey data, rendered as a living, queryable map of every parcel.</p>
+        </div>
+
+        <div class="pillar-card reveal" data-reveal="fade-up" data-delay="120">
+          <div class="pillar-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><path d="M18 2v6h6"/></svg>
+          </div>
+          <h3 class="pillar-card__title">Applied AI</h3>
+          <p class="pillar-card__desc">Machine learning models that read, reconcile, and verify decades of handwritten and scanned land records at scale.</p>
+        </div>
+
+        <div class="pillar-card reveal" data-reveal="fade-up" data-delay="180">
+          <div class="pillar-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="pillar-card__title">LegalTech</h3>
+          <p class="pillar-card__desc">Title chains, encumbrances, and litigation history structured into a single verifiable legal record.</p>
+        </div>
+
+        <div class="pillar-card reveal" data-reveal="fade-up" data-delay="240">
+          <div class="pillar-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <h3 class="pillar-card__title">PropTech</h3>
+          <p class="pillar-card__desc">Transaction-ready intelligence for developers, lenders, and investors underwriting real property at speed.</p>
+        </div>
+
+      </div><!-- /.pillars__grid -->
+    </div><!-- /.about__grid -->
+  </div><!-- /.container -->
+</section>
+
+<!-- ═══════════════════════════════════════════
+     VISION & MISSION
+════════════════════════════════════════════ -->
+<section class="section vision-section" id="vision" aria-labelledby="visionHeading">
+  <div class="section__aurora" aria-hidden="true"></div>
+  <div class="container">
+    <div class="vision__grid">
+
+      <!-- Vision card -->
+      <div class="vision-card reveal" data-reveal="fade-left">
+        <div class="vision-card__icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </div>
+        <span class="badge badge--purple">Vision</span>
+        <h3 class="vision-card__title" id="visionHeading">A future where land ownership is never in question.</h3>
+        <p class="vision-card__desc">
+          We envision an India where every citizen, institution, and government body can verify
+          land ownership, history, and legal standing in seconds — not months. Digital public
+          infrastructure that makes land as intelligible as identity and payments have become.
+        </p>
+      </div>
+
+      <!-- Mission card -->
+      <div class="vision-card reveal" data-reveal="fade-right">
+        <div class="vision-card__icon vision-card__icon--gold" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
+        <span class="badge badge--gold">Mission</span>
+        <h3 class="vision-card__title">Build the trust layer beneath India's land economy.</h3>
+        <p class="vision-card__desc">
+          Starting with Maharashtra, we are reconciling fragmented government records into a
+          unified, continuously verified intelligence platform — engineered to state-grade
+          security standards and designed to scale across every Indian state.
+        </p>
+      </div>
+
+    </div><!-- /.vision__grid -->
+  </div><!-- /.container -->
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FEATURED PRODUCT — MAHAATLAS
+════════════════════════════════════════════ -->
+<section class="section" id="products" aria-labelledby="productsHeading">
+  <div class="container">
+
+    <p class="section__eyebrow reveal" data-reveal="fade-up">Flagship Platform</p>
+    <h2 class="section__title section__title--wide reveal" data-reveal="fade-up" data-delay="80" id="productsHeading">
+      MahaAtlas — the Maharashtra Land<br>Intelligence Platform
+    </h2>
+    <p class="section__desc section__desc--wide reveal" data-reveal="fade-up" data-delay="160">
+      One platform unifying GIS, applied AI, LegalTech, and PropTech with public land records —
+      built to give every stakeholder the same verified truth.
+    </p>
+
+    <!-- Console mock -->
+    <div class="console reveal" data-reveal="scale" data-delay="100">
+      <div class="console__bar">
+        <div class="console__dots" aria-hidden="true">
+          <span class="console__dot console__dot--red"></span>
+          <span class="console__dot console__dot--yellow"></span>
+          <span class="console__dot console__dot--green"></span>
+        </div>
+        <div class="console__url">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          mahaatlas.civitasatlas.in / survey-no. 214/2B
+        </div>
+        <span class="badge badge--gold-sm">Live Sync</span>
+      </div>
+
+      <div class="console__body">
+        <!-- Map panel -->
+        <div class="console__map" aria-label="GIS parcel map of survey number 214/2B">
+          <svg class="console__map-svg" viewBox="0 0 400 260" aria-hidden="true">
+            <defs>
+              <radialGradient id="mapGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#5B21B6" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#5B21B6" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="400" height="260" fill="url(#mapGlow)"/>
+            <g stroke="#7C3AED" stroke-width="0.75" fill="rgba(91,33,182,0.08)" opacity="0.8">
+              <polygon points="10,40 120,20 160,90 60,120"/>
+              <polygon points="120,20 230,10 260,80 160,90"/>
+              <polygon points="60,120 160,90 190,180 90,200"/>
+              <polygon points="160,90 260,80 300,150 190,180" fill="rgba(212,175,55,0.12)" stroke="#D4AF37"/>
+              <polygon points="260,80 370,60 390,140 300,150"/>
+            </g>
+            <g fill="#D4AF37" opacity="0.9">
+              <circle cx="160" cy="90" r="3"/>
+              <circle cx="190" cy="180" r="3"/>
+              <circle cx="260" cy="80" r="3"/>
+              <circle cx="300" cy="150" r="3"/>
+            </g>
+            <!-- Grid lines -->
+            <g stroke="rgba(255,255,255,0.04)" stroke-width="0.5">
+              <line x1="0" y1="65" x2="400" y2="65"/><line x1="0" y1="130" x2="400" y2="130"/>
+              <line x1="0" y1="195" x2="400" y2="195"/><line x1="100" y1="0" x2="100" y2="260"/>
+              <line x1="200" y1="0" x2="200" y2="260"/><line x1="300" y1="0" x2="300" y2="260"/>
+            </g>
+          </svg>
+          <div class="console__map-overlay">
+            <div class="console__coords">
+              <span>Pune District · Haveli Taluka</span>
+              <span class="mono">18.5204° N, 73.8567° E</span>
+            </div>
+            <div class="console__parcel-card">
+              <p class="console__parcel-label">Selected Parcel</p>
+              <p class="console__parcel-id mono">Gat No. 214/2B · 1.42 Ha</p>
+              <p class="console__parcel-status">
+                <span class="status-dot status-dot--green" aria-hidden="true"></span>
+                Title verified · No active encumbrance
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data panel -->
+        <div class="console__data" role="table" aria-label="Land record data">
+          <div class="console__row" role="row"><span class="console__row-label" role="cell">7/12 Extract</span><span class="console__row-value console__row-value--ok" role="cell">Reconciled</span></div>
+          <div class="console__row" role="row"><span class="console__row-label" role="cell">Mutation Entries</span><span class="console__row-value mono" role="cell">12 records</span></div>
+          <div class="console__row" role="row"><span class="console__row-label" role="cell">Litigation Check</span><span class="console__row-value console__row-value--ok" role="cell">None found</span></div>
+          <div class="console__row" role="row"><span class="console__row-label" role="cell">Encumbrance Layer</span><span class="console__row-value console__row-value--ok" role="cell">Clear</span></div>
+          <div class="console__row" role="row"><span class="console__row-label" role="cell">Last Sync</span><span class="console__row-value mono" role="cell">4 minutes ago</span></div>
+        </div>
+      </div><!-- /.console__body -->
+    </div><!-- /.console -->
+
+    <!-- Feature cards grid -->
+    <div class="features__grid">
+
+      <div class="feature-card reveal" data-reveal="fade-up" data-delay="0">
+        <div class="feature-card__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg></div>
+        <h3 class="feature-card__title">Unified Land Records</h3>
+        <p class="feature-card__desc">7/12 extracts, mutation entries, and property cards reconciled into one continuously updated source of truth.</p>
+      </div>
+
+      <div class="feature-card reveal" data-reveal="fade-up" data-delay="60">
+        <div class="feature-card__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <h3 class="feature-card__title">Satellite Parcel Mapping</h3>
+        <p class="feature-card__desc">Every survey number rendered on a live satellite layer, cross-checked against revenue department boundaries.</p>
+      </div>
+
+      <div class="feature-card reveal" data-reveal="fade-up" data-delay="120">
+        <div class="feature-card__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3V5l-6-3-6 3v4c0 2-2 3-3 3 0 2 1.5 6 9 9 7.5-3 9-7 9-9z"/></svg></div>
+        <h3 class="feature-card__title">Title Verification Engine</h3>
+        <p class="feature-card__desc">AI-assisted chain-of-title analysis that flags disputes, encumbrances, and irregularities before they become risk.</p>
+      </div>
+
+      <div class="feature-card reveal" data-reveal="fade-up" data-delay="0">
+        <div class="feature-card__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h3 class="feature-card__title">Encrypted Access Layer</h3>
+        <p class="feature-card__desc">Role-based, auditable access for government departments, institutions, and verified professionals.</p>
+      </div>
+
+      <div class="feature-card reveal" data-reveal="fade-up" data-delay="60">
+        <div class="feature-card__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div>
+        <h3 class="feature-card__title">Layered Intelligence</h3>
+        <p class="feature-card__desc">Zoning, tenancy, litigation, and revenue layers overlaid on a single parcel view for instant due diligence.</p>
+      </div>
+
+      <div class="feature-card reveal" data-reveal="fade-up" data-delay="120">
+        <div class="feature-card__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0 5.52 4.48 10 10 10s10-4.48 10-10"/><path d="M12 2v4m0 16v-4M4.22 4.22l2.83 2.83m9.9 9.9 2.83 2.83M2 12h4m16 0h-4M4.22 19.78l2.83-2.83m9.9-9.9 2.83-2.83"/></svg></div>
+        <h3 class="feature-card__title">Real-Time Sync</h3>
+        <p class="feature-card__desc">Direct reconciliation with Maharashtra land record systems, keeping every record current, not archival.</p>
+      </div>
+
+    </div><!-- /.features__grid -->
+
+    <div class="section__cta-row reveal" data-reveal="fade-up">
+      <a href="#contact" class="btn btn--outline btn--lg magnetic">
+        Request platform access
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+
+  </div><!-- /.container -->
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FUTURE PRODUCTS
+════════════════════════════════════════════ -->
+<section class="section" aria-labelledby="futureHeading">
+  <div class="container">
+
+    <p class="section__eyebrow reveal" data-reveal="fade-up">The Atlas Family</p>
+    <h2 class="section__title reveal" data-reveal="fade-up" data-delay="80" id="futureHeading">
+      One intelligence architecture, expanding<br>across public infrastructure.
+    </h2>
+    <p class="section__desc reveal" data-reveal="fade-up" data-delay="160">
+      MahaAtlas is the first in a family of Atlas platforms — each extending the same
+      verified-data architecture into a new domain of public infrastructure.
+    </p>
+
+    <div class="future__grid">
+
+      <div class="future-card reveal" data-reveal="fade-up" data-delay="0">
+        <span class="future-card__number" aria-hidden="true">02</span>
+        <div class="future-card__header">
+          <div class="future-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
+          </div>
+          <h3 class="future-card__title">LegalAtlas</h3>
+        </div>
+        <p class="future-card__tagline">Judicial &amp; legal record intelligence</p>
+        <p class="future-card__desc">A national layer connecting land disputes, court orders, and registry records into one legal intelligence graph for practitioners and institutions.</p>
+        <span class="badge badge--purple future-card__badge">In Research</span>
+      </div>
+
+      <div class="future-card reveal" data-reveal="fade-up" data-delay="100">
+        <span class="future-card__number" aria-hidden="true">03</span>
+        <div class="future-card__header">
+          <div class="future-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <h3 class="future-card__title">UrbanAtlas</h3>
+        </div>
+        <p class="future-card__tagline">City planning &amp; zoning intelligence</p>
+        <p class="future-card__desc">Master-plan aware urban intelligence for municipal bodies and planners — zoning, land use, and infrastructure overlays in one map.</p>
+        <span class="badge badge--gold future-card__badge">In Design</span>
+      </div>
+
+      <div class="future-card reveal" data-reveal="fade-up" data-delay="200">
+        <span class="future-card__number" aria-hidden="true">04</span>
+        <div class="future-card__header">
+          <div class="future-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+          </div>
+          <h3 class="future-card__title">InfraAtlas</h3>
+        </div>
+        <p class="future-card__tagline">Infrastructure asset intelligence</p>
+        <p class="future-card__desc">A live registry of public infrastructure assets — roads, utilities, and works — mapped against land ownership for transparent planning.</p>
+        <span class="badge badge--muted future-card__badge">Planned</span>
+      </div>
+
+    </div><!-- /.future__grid -->
+  </div><!-- /.container -->
+</section>
+
+<!-- ═══════════════════════════════════════════
+     WHY IT MATTERS — STATS
+════════════════════════════════════════════ -->
+<section class="section stats-section" aria-labelledby="statsHeading">
+  <div class="section__gold-glow" aria-hidden="true"></div>
+  <div class="container">
+
+    <p class="section__eyebrow reveal" data-reveal="fade-up">Why This Matters</p>
+    <h2 class="section__title reveal" data-reveal="fade-up" data-delay="80" id="statsHeading">
+      Land uncertainty is one of India's most<br>expensive unsolved problems.
+    </h2>
+    <p class="section__desc reveal" data-reveal="fade-up" data-delay="160">
+      Disputed titles delay credit, stall development, and clog courts for decades.
+      The cost isn't abstract — it's measured in stalled capital, generational litigation,
+      and citizens who cannot prove what they own.
+    </p>
+
+    <div class="stats__grid">
+      <div class="stat-card reveal" data-reveal="fade-up" data-delay="0">
+        <p class="stat-card__value" data-target="3.6" data-suffix=" Cr+" data-decimal="1">0</p>
+        <p class="stat-card__label">Land parcels in Maharashtra</p>
+        <p class="stat-card__detail">Records fragmented across Talathi offices, courts, and registries.</p>
+      </div>
+      <div class="stat-card reveal" data-reveal="fade-up" data-delay="80">
+        <p class="stat-card__value" data-target="70" data-suffix="%" data-prefix="60–">0</p>
+        <p class="stat-card__label">of civil litigation in India</p>
+        <p class="stat-card__detail">Estimated to stem from land and property disputes.</p>
+      </div>
+      <div class="stat-card reveal" data-reveal="fade-up" data-delay="160">
+        <p class="stat-card__value" data-target="1" data-suffix=" Trillion+" data-prefix="₹">0</p>
+        <p class="stat-card__label">in stalled asset value</p>
+        <p class="stat-card__detail">Property and credit decisions delayed by title uncertainty.</p>
+      </div>
+      <div class="stat-card reveal" data-reveal="fade-up" data-delay="240">
+        <p class="stat-card__value" data-target="35" data-suffix=" Districts">0</p>
+        <p class="stat-card__label">targeted for phased rollout</p>
+        <p class="stat-card__detail">A statewide intelligence layer, built district by district.</p>
+      </div>
+    </div><!-- /.stats__grid -->
+
+    <p class="stats__footnote reveal" data-reveal="fade-up">
+      Figures are illustrative estimates compiled from public commentary on Indian land administration
+      and litigation trends, intended to frame the scale of the problem Civitas Atlas addresses.
+    </p>
+
+  </div><!-- /.container -->
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TECH STACK (MARQUEE)
+════════════════════════════════════════════ -->
+<section class="section tech-section" aria-labelledby="techHeading">
+  <div class="container">
+    <p class="section__eyebrow section__eyebrow--center reveal" data-reveal="fade-up">Engineering</p>
+    <h2 class="section__title section__title--center reveal" data-reveal="fade-up" data-delay="80" id="techHeading">
+      Engineered on infrastructure built<br>for scale and security.
+    </h2>
+    <p class="section__desc section__desc--center reveal" data-reveal="fade-up" data-delay="160">
+      Every layer of the Atlas architecture is chosen for auditability, spatial precision,
+      and the ability to serve government-grade workloads.
+    </p>
+  </div>
+
+  <!-- Scrolling marquee -->
+  <div class="marquee-wrapper" role="region" aria-label="Tech stack">
+    <div class="marquee-fade marquee-fade--left" aria-hidden="true"></div>
+    <div class="marquee-fade marquee-fade--right" aria-hidden="true"></div>
+    <div class="marquee" id="marquee">
+      <div class="marquee__track" id="marqueeTrack">
+        <!-- Items duplicated in JS for infinite loop -->
+        <div class="tech-chip"><span class="tech-chip__dot" aria-hidden="true"></span><span class="tech-chip__name">Next.js 15</span><span class="tech-chip__cat">Framework</span></div>
+        <div class="tech-chip"><span class="tech-chip__dot" aria-hidden="true"></span><span class="tech-chip__name">TypeScript</span><span class="tech-chip__cat">Language</span></div>
+        <div class="tech-chip"><span class="tech-chip__dot" aria-hidden="true"></span><span class="tech-chip__name">PostGIS</span><span class="tech-chip__cat">Spatial Database</span></div>
+        <div class="tech-chip"><span class="tech-chip__dot" aria-hidden="true"></span><span class="tech-chip__name">Python / PyTorch</span><span class="tech-chip__cat">AI &amp; ML</span></div>
+        <div class="tech-chip"><span class="tech-chip__dot" aria-hidden="true"></span><span class="tech-chip__name">Apache Kafka</span><span class="tech-chip__cat">Data Pipelines</span></div>
+        <div class="tech-chip"><span class="tech-chip__dot" aria-hidden="true"></span><span class="tech-chip__name">Mapbox GL</span><span class="tech-chip__cat">Cartography</span></div>
+        <div class="tech-chip"><span class="tech-chip__dot" aria-hidden="true"></span><span class="tech-chip__name">AWS GovCloud</span><span class="tech-chip__cat">Infrastructure</span></div>
+        <div class="tech-chip"><span class="tech-chip__dot" aria-hidden="true"></span><span class="tech-chip__name">OCR + NLP Models</span><span class="tech-chip__cat">Document Intelligence</span></div>
+        <div class="tech-chip"><span class="tech-chip__dot" aria-hidden="true"></span><span class="tech-chip__name">Zero-Trust Security</span><span class="tech-chip__cat">Access Control</span></div>
+        <div class="tech-chip"><span class="tech-chip__dot" aria-hidden="true"></span><span class="tech-chip__name">Tailwind CSS</span><span class="tech-chip__cat">Styling</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="tech-section__footnote reveal" data-reveal="fade-up">
+      All infrastructure is deployed within Indian data residency boundaries, with encryption
+      at rest and in transit, and role-based audit logging across every government integration.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ROADMAP
+════════════════════════════════════════════ -->
+<section class="section" id="roadmap" aria-labelledby="roadmapHeading">
+  <div class="container">
+
+    <p class="section__eyebrow reveal" data-reveal="fade-up">Roadmap</p>
+    <h2 class="section__title reveal" data-reveal="fade-up" data-delay="80" id="roadmapHeading">
+      From district pilots to national<br>digital infrastructure.
+    </h2>
+    <p class="section__desc reveal" data-reveal="fade-up" data-delay="160">
+      Our rollout follows the structure of the data itself — district by district,
+      department by department, toward a federated platform any Indian state can build on.
+    </p>
+
+    <div class="timeline">
+      <div class="timeline__line" aria-hidden="true"></div>
+
+      <div class="timeline__item reveal" data-reveal="fade-up" data-delay="0">
+        <div class="timeline__node timeline__node--complete" aria-label="Completed">
+          <span class="timeline__dot"></span>
+        </div>
+        <div class="timeline__card">
+          <div class="timeline__meta">
+            <span class="timeline__phase">Phase 01</span>
+            <span class="timeline__year">2024</span>
+          </div>
+          <h3 class="timeline__title">Foundation &amp; Data Architecture</h3>
+          <p class="timeline__desc">Cadastral data modeling, GIS pipeline design, and partnerships to structure Maharashtra's fragmented land record systems.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item reveal" data-reveal="fade-up" data-delay="80">
+        <div class="timeline__node timeline__node--active" aria-label="In Progress">
+          <span class="timeline__dot timeline__dot--pulse"></span>
+        </div>
+        <div class="timeline__card timeline__card--active">
+          <div class="timeline__meta">
+            <span class="timeline__phase">Phase 02</span>
+            <span class="timeline__year">2025</span>
+            <span class="timeline__status-badge">In Progress</span>
+          </div>
+          <h3 class="timeline__title">MahaAtlas Private Rollout</h3>
+          <p class="timeline__desc">Pilot deployment across select districts with financial institutions and legal partners for title verification workflows.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item reveal" data-reveal="fade-up" data-delay="160">
+        <div class="timeline__node" aria-label="Upcoming"><span class="timeline__dot timeline__dot--muted"></span></div>
+        <div class="timeline__card">
+          <div class="timeline__meta"><span class="timeline__phase">Phase 03</span><span class="timeline__year">2026</span></div>
+          <h3 class="timeline__title">Statewide Public Access</h3>
+          <p class="timeline__desc">Citizen-facing access layer, expanded district coverage, and integration with state revenue department systems.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item reveal" data-reveal="fade-up" data-delay="220">
+        <div class="timeline__node" aria-label="Upcoming"><span class="timeline__dot timeline__dot--muted"></span></div>
+        <div class="timeline__card">
+          <div class="timeline__meta"><span class="timeline__phase">Phase 04</span><span class="timeline__year">2027</span></div>
+          <h3 class="timeline__title">LegalAtlas &amp; UrbanAtlas Launch</h3>
+          <p class="timeline__desc">Expansion of the Atlas platform into judicial intelligence and urban planning, extending beyond Maharashtra.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item reveal" data-reveal="fade-up" data-delay="280">
+        <div class="timeline__node" aria-label="Upcoming"><span class="timeline__dot timeline__dot--muted"></span></div>
+        <div class="timeline__card">
+          <div class="timeline__meta"><span class="timeline__phase">Phase 05</span><span class="timeline__year">2028+</span></div>
+          <h3 class="timeline__title">National Digital Public Infrastructure</h3>
+          <p class="timeline__desc">A federated intelligence layer across Indian states — land, law, and infrastructure unified as public digital infrastructure.</p>
+        </div>
+      </div>
+
+    </div><!-- /.timeline -->
+  </div><!-- /.container -->
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOUNDER
+════════════════════════════════════════════ -->
+<section class="section founder-section" aria-labelledby="founderHeading">
+  <div class="container">
+    <div class="founder__grid">
+
+      <!-- Portrait placeholder -->
+      <div class="founder__portrait reveal" data-reveal="fade-right">
+        <div class="founder__portrait-inner" aria-hidden="true">
+          <span class="founder__initials">OW</span>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="founder__text reveal" data-reveal="fade-left">
+        <span class="badge badge--purple">Founder's Note</span>
+        <blockquote class="founder__quote" id="founderHeading">
+          "Land is the oldest asset class in India, and the least digitized. We're building
+          the layer that should have existed decades ago."
+        </blockquote>
+        <p class="founder__bio">
+          Civitas Atlas was founded on a simple observation: India has built world-class digital
+          public infrastructure for identity and payments, but land — the foundation of most
+          household wealth and most civil litigation — remains fragmented across paper registers
+          and disconnected systems. MahaAtlas is our answer, built first for Maharashtra and
+          designed to scale nationally.
+        </p>
+        <div class="founder__footer">
+          <div class="founder__meta">
+            <p class="founder__name">Om Wadhane</p>
+            <p class="founder__role">Founder &amp; Product Lead · Civitas Atlas Technologies Pvt. Ltd.</p>
+          </div>
+          <div class="founder__socials">
+            <a href="#contact" class="social-btn" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#contact" class="social-btn" aria-label="Twitter / X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.founder__grid -->
+  </div><!-- /.container -->
+</section>
+
+<!-- ═══════════════════════════════════════════
+     RESEARCH
+════════════════════════════════════════════ -->
+<section class="section" id="research" aria-labelledby="researchHeading">
+  <div class="container">
+
+    <p class="section__eyebrow reveal" data-reveal="fade-up">Research &amp; Publications</p>
+    <h2 class="section__title reveal" data-reveal="fade-up" data-delay="80" id="researchHeading">
+      Publishing the methods behind the platform.
+    </h2>
+    <p class="section__desc reveal" data-reveal="fade-up" data-delay="160">
+      We share our research on spatial AI, digital public infrastructure, and legal-data systems —
+      in the open, for the ecosystem building alongside us.
+    </p>
+
+    <div class="research__list">
+
+      <a href="#contact" class="research-item reveal" data-reveal="fade-up" data-delay="0">
+        <div class="research-item__body">
+          <div class="research-item__meta">
+            <span class="badge badge--gold-sm">Applied AI</span>
+            <span class="research-item__date">2026</span>
+          </div>
+          <h3 class="research-item__title">Reconciling Fragmented Land Records with Graph-Based AI Models</h3>
+          <p class="research-item__summary">A framework for resolving conflicting ownership claims across decades of scanned revenue documents using graph neural networks.</p>
+        </div>
+        <div class="research-item__arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+      </a>
+
+      <a href="#contact" class="research-item reveal" data-reveal="fade-up" data-delay="80">
+        <div class="research-item__body">
+          <div class="research-item__meta">
+            <span class="badge badge--gold-sm">Policy &amp; DPI</span>
+            <span class="research-item__date">2025</span>
+          </div>
+          <h3 class="research-item__title">Digital Public Infrastructure for Land: A Maharashtra Case Study</h3>
+          <p class="research-item__summary">How population-scale, interoperable land data platforms can be built as public infrastructure rather than proprietary products.</p>
+        </div>
+        <div class="research-item__arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+      </a>
+
+      <a href="#contact" class="research-item reveal" data-reveal="fade-up" data-delay="160">
+        <div class="research-item__body">
+          <div class="research-item__meta">
+            <span class="badge badge--gold-sm">LegalTech</span>
+            <span class="research-item__date">2025</span>
+          </div>
+          <h3 class="research-item__title">Spatial Trust Scores: Quantifying Title Risk at the Parcel Level</h3>
+          <p class="research-item__summary">A proposed scoring methodology for encumbrance and dispute risk, built from litigation, registry, and satellite signals.</p>
+        </div>
+        <div class="research-item__arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+      </a>
+
+    </div><!-- /.research__list -->
+  </div><!-- /.container -->
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════ -->
+<section class="section" id="contact" aria-labelledby="contactHeading">
+  <div class="container">
+    <div class="contact__grid">
+
+      <!-- Left -->
+      <div class="contact__info">
+        <p class="section__eyebrow reveal" data-reveal="fade-up">Contact</p>
+        <h2 class="section__title reveal" data-reveal="fade-up" data-delay="80" id="contactHeading">
+          Partner with Civitas Atlas.
+        </h2>
+        <p class="section__desc reveal" data-reveal="fade-up" data-delay="160">
+          For government partnerships, institutional access, research collaboration, or press
+          inquiries — reach out and our team will respond within two business days.
+        </p>
+        <div class="contact__details reveal" data-reveal="fade-up" data-delay="220">
+          <div class="contact__detail-item">
+            <span class="contact__detail-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            contact@civitasatlas.in
+          </div>
+          <div class="contact__detail-item">
+            <span class="contact__detail-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            Pune, Maharashtra, India
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="contact__form-wrap reveal" data-reveal="fade-left">
+        <div class="contact__card" id="contactCard">
+
+          <!-- Default form state -->
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="form__row">
+              <div class="form__field">
+                <label class="form__label" for="name">Full name</label>
+                <input class="form__input" type="text" id="name" name="name" placeholder="Your name" required autocomplete="name"/>
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="email">Email address</label>
+                <input class="form__input" type="email" id="email" name="email" placeholder="you@organization.com" required autocomplete="email"/>
+              </div>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="organization">Organization</label>
+              <input class="form__input" type="text" id="organization" name="organization" placeholder="Government body, institution, or company" required autocomplete="organization"/>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="message">Message</label>
+              <textarea class="form__textarea" id="message" name="message" rows="4" placeholder="Tell us about your use case" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--gold btn--lg magnetic">
+              Send message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+
+          <!-- Success state (hidden) -->
+          <div class="contact__success" id="contactSuccess" aria-live="polite" hidden>
+            <div class="contact__success-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="contact__success-title">Message sent</h3>
+            <p class="contact__success-text">Thank you for reaching out. A member of the Civitas Atlas team will be in touch shortly.</p>
+          </div>
+
+        </div><!-- /.contact__card -->
+      </div>
+
+    </div><!-- /.contact__grid -->
+  </div><!-- /.container -->
+</section>
+
+</main><!-- /#main-content -->
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__grid-glow" aria-hidden="true"></div>
+  <div class="container">
+    <div class="footer__top">
+
+      <!-- Brand -->
+      <div class="footer__brand">
+        <a href="#home" class="navbar__logo" aria-label="Civitas Atlas – Home">
+          <span class="navbar__logo-mark" aria-hidden="true">C</span>
+          <span class="navbar__logo-text">Civitas Atlas Technologies</span>
+        </a>
+        <p class="footer__tagline">
+          Building India's digital public infrastructure for land — starting with MahaAtlas,
+          the Maharashtra Land Intelligence Platform.
+        </p>
+      </div>
+
+      <!-- Products -->
+      <nav class="footer__nav-col" aria-label="Products">
+        <p class="footer__col-heading">Products</p>
+        <ul>
+          <li><a href="#products" class="footer__link">MahaAtlas</a></li>
+          <li><a href="#products" class="footer__link">LegalAtlas</a></li>
+          <li><a href="#products" class="footer__link">UrbanAtlas</a></li>
+          <li><a href="#products" class="footer__link">InfraAtlas</a></li>
+        </ul>
+      </nav>
+
+      <!-- Company -->
+      <nav class="footer__nav-col" aria-label="Company">
+        <p class="footer__col-heading">Company</p>
+        <ul>
+          <li><a href="#about"    class="footer__link">About</a></li>
+          <li><a href="#research" class="footer__link">Research</a></li>
+          <li><a href="#roadmap"  class="footer__link">Roadmap</a></li>
+          <li><a href="#contact"  class="footer__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Office -->
+      <div class="footer__office">
+        <p class="footer__col-heading">Registered Office</p>
+        <address class="footer__address">
+          Civitas Atlas Technologies Pvt. Ltd.<br>
+          Pune, Maharashtra, India<br>
+          <a href="mailto:contact@civitasatlas.in" class="footer__link">contact@civitasatlas.in</a>
+        </address>
+      </div>
+
+    </div><!-- /.footer__top -->
+
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 Civitas Atlas Technologies Pvt. Ltd. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="#" class="footer__legal-link">Privacy Policy</a>
+        <a href="#" class="footer__legal-link">Terms of Service</a>
+        <a href="#" class="footer__legal-link">Data Security</a>
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+</footer>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- Script -->
+<script src="script.js"></script>
+</body>
+</html>
